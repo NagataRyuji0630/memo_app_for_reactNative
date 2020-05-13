@@ -96,16 +96,9 @@ const styles = StyleSheet.create({
     height: 48,
     backgroundColor: '#E31675',
     borderRadius: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
+
   },
   memoAddBtnTitle: {
-    fontSize: 32,
-    lineHeight: 32,
-    color: 'white',
+    fontSize: 24,
   }
 });

@@ -20,22 +20,10 @@ export default class App extends React.Component {
             <Text style={styles.memoTitle}>講義のアイデア</Text>
             <Text style={styles.memoDate}>2020/5/13</Text>
           </View>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講義のアイデア</Text>
-            <Text style={styles.memoDate}>2020/5/13</Text>
-          </View>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講義のアイデア</Text>
-            <Text style={styles.memoDate}>2020/5/13</Text>
-          </View>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講義のアイデア</Text>
-            <Text style={styles.memoDate}>2020/5/13</Text>
-          </View>
         </View>
 
-        <View style={styles.memoAddBtn}>
-          <Text style={styles.memoAddBtnTitle}>+</Text>
+        <View>
+          <Text>+</Text>
         </View>
       </View>
     );
@@ -88,24 +76,4 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
   },
-  memoAddBtn: {
-    position: 'absolute',
-    bottom: 32,
-    right: 32,
-    width: 48,
-    height: 48,
-    backgroundColor: '#E31675',
-    borderRadius: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-  },
-  memoAddBtnTitle: {
-    fontSize: 32,
-    lineHeight: 32,
-    color: 'white',
-  }
 });
