@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
         right: 32,
         width: 48,
         height: 48,
+        backgroundColor: '#E31675',
         borderRadius: 24,
         justifyContent: 'center',
         alignItems: 'center',
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     circleBtnTitle: {
         fontSize: 32,
         lineHeight: 32,
+        color: 'white',
     }
 });
 
@@ -36,8 +38,8 @@ class CircleBtn extends Component {
         }
 
         return (
-            <View style={[styles.circleBtn, style, { backgroundColor: bgColor }]}>
-                <Text style={[styles.circleBtnTitle, { color: textColor }]}>{this.props.children}</Text>
+            <View style={[styles.circleBtn, style]}>
+                <Text style={styles.circleBtnTitle}>{this.props.children}</Text>
             </View>
         );
     }

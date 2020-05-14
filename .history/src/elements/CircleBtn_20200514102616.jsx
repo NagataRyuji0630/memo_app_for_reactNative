@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
 class CircleBtn extends Component {
     render() {
-        const { style, color } = this.props;
+        const { style, color, textColor } = this.props;
 
         let bgColor = '#E31675';
         let textColor = 'white';

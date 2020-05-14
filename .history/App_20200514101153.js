@@ -6,7 +6,9 @@ import MemoDtailScreen from './src/screens/MemoDetailScreen';
 
 
 export default class App extends React.Component {
-  render() {    
+  render() {
+    const style = this.props.style;
+    
     return (
       <View style={styles.container}>
         <AppBar />
