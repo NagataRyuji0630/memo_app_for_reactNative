@@ -1,16 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import { createIconSet } from '@expo/vector-icons';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
-
-const glyphMap = {
-    pencil: '\uf303',
-    plus: '\uf067',
-};
-
-const CustomIcon = createIconSet(glyphMap, 'fontAwsome', fontAwsome);
 
 const styles = StyleSheet.create({
     circleBtn: {
@@ -28,32 +21,33 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
     },
     circleBtnTitle: {
-        fontSize: 24,
-        lineHeight: 24,
+        fontSize: 32,
+        lineHeight: 32,
         fontFamily: 'fontAwsome',
     }
 });
 
+let customFonts = {
+    FontAwsome: fontAwsome,
+  };
 
 class CircleBtn extends Component {
 
     state = {
         fontsLoaded: false,
-    };
-
-    async _loadFontsAsync() {
-        await Font.loadAsync({
-            FontAwsome: fontAwsome,
-        });
+      };
+    
+      async _loadFontsAsync() {
+        await Font.loadAsync(customFonts);
         this.setState({ fontsLoaded: true });
-    }
-
-    componentDidMount() {
+      }
+    
+      componentDidMount() {
         this._loadFontsAsync();
-    }
+      }
 
     render() {
-        const {name, style, color } = this.props;
+        const { style, color } = this.props;
 
         let bgColor = '#E31675';
         let textColor = 'white';
@@ -65,13 +59,7 @@ class CircleBtn extends Component {
 
         return (
             <View style={[styles.circleBtn, style, { backgroundColor: bgColor }]}>
-                {
-                    this.state.fontsLoaded
-                        ?
-                        <CustomIcon name={name} style={[styles.circleBtnTitle, { color: textColor }]} />
-                        :
-                        null
-                }
+                <Text style={[styles.circleBtnTitle, { color: textColor }]}>{this.props.children}</Text>
             </View>
         );
     }

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { createIconSet } from '@expo/vector-icons';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
 
-const glyphMap = {
-    pencil: '\uf303',
+const glyphMap = { 'icon-name': 1234, test: '∆' };
+const CustomIcon = createIconSet({
+    pencile: '\uf303',
     plus: '\uf067',
-};
-
-const CustomIcon = createIconSet(glyphMap, 'fontAwsome', fontAwsome);
+}, 'fontAwsome');
 
 const styles = StyleSheet.create({
     circleBtn: {
@@ -53,7 +53,7 @@ class CircleBtn extends Component {
     }
 
     render() {
-        const {name, style, color } = this.props;
+        const { style, color } = this.props;
 
         let bgColor = '#E31675';
         let textColor = 'white';
@@ -68,7 +68,7 @@ class CircleBtn extends Component {
                 {
                     this.state.fontsLoaded
                         ?
-                        <CustomIcon name={name} style={[styles.circleBtnTitle, { color: textColor }]} />
+                        <Text style={[styles.circleBtnTitle, { color: textColor }]}>{this.props.children}</Text>
                         :
                         null
                 }

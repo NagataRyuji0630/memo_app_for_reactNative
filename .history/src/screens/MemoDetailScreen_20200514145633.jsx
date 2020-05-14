@@ -51,7 +51,7 @@ class MemoDetailScreen extends Component {
                     <Text>講座のアイデアです。</Text>
                 </View>
 
-                <CircleBtn name="pencil" color='white' style={styles.editBtn} />
+                <CircleBtn name="pencile" color='white' style={styles.editBtn} />
             </View>
         );
     }

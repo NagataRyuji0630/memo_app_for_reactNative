@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import * as Font from 'expo-font';
 import { createIconSet } from '@expo/vector-icons';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
@@ -10,7 +10,7 @@ const glyphMap = {
     plus: '\uf067',
 };
 
-const CustomIcon = createIconSet(glyphMap, 'fontAwsome', fontAwsome);
+const CustomIcon = createIconSet(glyphMap, 'fontAwsome');
 
 const styles = StyleSheet.create({
     circleBtn: {

@@ -17,7 +17,9 @@ class MemoListScreen extends Component {
         return (
             <View style={styles.container}>
                 <MemoList />
-                <CircleBtn name='plus' />
+                <CircleBtn>
+                    {'\uf067'}
+                </CircleBtn>
             </View>
         );
     }
